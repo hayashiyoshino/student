@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>カウントダウン（ロケット発射、書き出し箇所をまとめる）</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+"use strict";
+let カウンタ = 10;
+let タイマーID = setInterval(カウントダウン, 1000);
+
+function カウントダウン() {
+  let スタイル指定 = `style="width: 320px; text-align: center; font-size: 36pt;"`;
+  let 画像スタイル = `style="width: 200px;"`;
+  let ファイル名 = "pictures/rocket1.png";
+  let カウントダウン文字列 = カウンタ;
+  if (カウンタ < 0) { // 終了処理
+    カウントダウン文字列 = "発射！";
+    clearInterval(タイマーID); // タイマー停止
+  }
+  document.open(); // 画面クリア
+  document.write(`
+                 <div ${スタイル指定}>ロケット発射<br />
+                 <img src="${ファイル名}" ${画像スタイル} /><br />
+                 ${カウントダウン文字列}
+                 </div>`);
+  カウンタ--; // 次に備える
+}
+
+</script>
+</body>
+</html>

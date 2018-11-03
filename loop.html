@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>同じ文を24回</title>
+</head>
+<body>
+
+<script type="text/javascript">
+"use strict";
+  for (let i=1; i<=16; i++) {
+    if (i<=9){
+      let filename =`pictures/picture00${i}.jpg`;
+      let imgtag =`<img src="${filename}" style="width: 25%;">`;
+      document.write(imgtag);
+    }
+    else {
+      let filename =`pictures/picture0${i}.jpg`;
+      let imgtag =`<img src="${filename}" style="width: 25%;">`;
+      document.write(imgtag);
+    }
+
+  }
+// for (let i=1; i<=24; i++) {
+//   if (i <= 9) {
+//     document.write(`${i}：私は00${i}の写真が大好きです。<br>`);
+//     document.write(`<img src="pictures/picture00${i}.jpg"><br>`);
+//   }
+//   else {
+//     document.write(`${i}：私は0${i}の写真が大好きです。<br>`);
+//     document.write(`<img src="pictures/picture0${i}.jpg"><br>`);
+//   }
+
+// }
+</script>
+
+</body>
+</html>

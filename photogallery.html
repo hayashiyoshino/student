@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Photo Gallery</title>
+
+<style type="text/css">
+  #pictureFrame {
+    text-align: center;
+    width: 640px;
+    margin: auto;
+  }
+</style>
+
+</head>
+
+<body>
+  <div style="text-align: center;">
+    <h1>Photo Gallery</h1>
+  <div id="smallPicts"></div>
+
+<script type="text/javascript">
+  "use strict";
+  let 画像の枚数 = 5;
+  let html = "";
+  for (let i=0; i<画像の枚数; i++) {
+    let ファイル名 = `pictures/picture00${i}.jpg`;
+    html += `<img src="${ファイル名}" style="width: 120px;">`;
+  }
+  document.getElementById("smallPicts").innerHTML = html;
+
+  for (let i=0; i<画像の枚数; i++) {
+    let ファイル名 = `pictures/picture00${i}.jpg`;
+    document.images[i].onmouseover = function() {
+      大きな画像を表示(ファイル名);
+    }
+    document.images[i].onmouseout = function() {
+      大きな画像を消去();
+    }
+  }
+
+
+  function 大きな画像を表示(ファイル名) {
+    document.getElementById("pictureFrame").innerHTML =
+      `<img src="${ファイル名}" style="width: 480px;">`;
+  }
+
+  function 大きな画像を消去() {
+    document.getElementById("pictureFrame").innerHTML = "";
+  }
+</script>
+  <div id="pictureFrame">
+  </div>
+</body>
+</html>

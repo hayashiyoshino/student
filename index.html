@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript講座　受講生用サンプルフォルダ</title>
+</head>
+<body>
+  <h2>JavaScript講座　受講生用サンプルフォルダ</h2>
+  <div style="margin: 100px 0 0 0";>
+  <img id="pict0" src="pictures/picture000.jpg" style="width: 20vw">
+  <img id="pict1" src="pictures/picture001.jpg" style="width: 20vw">
+  <img id="pict2" src="pictures/picture002.jpg" style="width: 20vw">
+  <img id="pict3" src="pictures/picture003.jpg" style="width: 20vw">
+</div>
+  <script>
+    let picture = document.getElementById("pict0");
+    let picture1 = document.getElementById("pict1");
+    let picture2 = document.getElementById("pict2");
+    let picture3 = document.getElementById("pict3");
+    document.images[0].onmouseover = function() {
+      picture.style.width = "40vh";
+    }
+    document.images[0].onmouseout = function() {
+      picture.style.width = "20vh";
+    }
+    document.images[1].onmouseover = function() {
+      picture1.style.width = "40vh";
+    }
+    document.images[1].onmouseout = function() {
+      picture1.style.width = "20vh";
+    }
+    document.images[2].onmouseover = function() {
+      picture2.style.width = "40vh";
+    }
+    document.images[2].onmouseout = function() {
+      picture2.style.width = "20vh";
+    }
+    document.images[3].onmouseover = function() {
+      picture3.style.width = "40vh";
+    }
+    document.images[3].onmouseout = function() {
+      picture3.style.width = "20vh";
+    }
+
+
+  // let counter = 0;
+  // const timerID = setInterval(dialog, 3000);
+  // function dialog() {
+  //   alert("3秒経過しました")
+  //   counter ++;
+  //   if (3 <= counter) {
+  //     clearInterval(timerID);
+  //   }
+  // }
+  // const timerID = setInterval(func1, 1000*3);
+  // function func1() {
+  //   alert("3秒経過しました")
+  //   clearInterval(timerID);
+  // }
+  // let x = "";
+  // for (let i=0; i<8; i++) {
+  //   x += `<img src="pictures/picture00${i}.jpg" style="width: 60vw">`;
+  // }
+  // document.write(x)
+//   let x = "";
+//   for (let i=1; i<=10; i++) {
+//     x += `<li>${i}:私はプログラミングが好きです</li>`;
+//     console.log(x)
+//   }
+// document.write(`<ol>${x}</ol>`);
+  // const filename = "pictures/picture000.jpg";
+  // const imagetag = `<img src="${filename}" style="width: 80vw;">`;
+  // document.write(imagetag);
+  // const a = 2;
+  // const b = 3;
+  // document.write(`a*b=${a*b}<br>`);
+  // let x = "JavaScript";
+  // let y = "入門";
+  // x += y;
+  // x = `「${x}」`;
+  // document.write(x);
+  // let x = "JavaScript";
+  // x += "入門";
+  // let y = "実習編もどうぞーー";
+  // x = y + x;
+  // x = "『" + x + "』";
+  // document.write(x);
+  // let x = "JavaScript";
+  // console.log(x);
+  // x += "入門";
+  // console.log(x);
+  // let y = "実習編";
+  // console.log(y);
+  // x = y + x;
+  // console.log(x);
+  // x = `『${x}』`;
+  // console.log(x);
+  // let x = 300;
+  // console.log(x);
+  // x += 33;
+  // console.log(x);
+  // x -= 21;
+  // console.log(x);
+  // x++;
+  // console.log(x);
+// let x = Math.random();
+// x *= 10;
+// x = Math.floor(x);
+// document.write(x);
+
+// let x = 300;
+// x += 33;
+// x -= 21;
+// x ++;
+// document.write(x);
+// let x = -3;
+// x -= 20;
+// x += 3;
+// x --;
+// document.write(x);
+</script>
+</body>
+</html>

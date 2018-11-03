@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>四角を動かす</title>
+</head>
+
+<body>
+  <div id="rectangle" style="background-color: #6DBBA1;
+       width: 200px; height: 180px;">
+  </div>
+  <div id="car">
+    <img src="pictures/car1.png">
+  </div>
+
+  <script>
+    const migihasi = 800;
+    const bairitu = 5;
+    let counter = 0;
+    let houkou = 1;
+    const timerID = setInterval (movesikaku, 10);
+    function movesikaku() {
+      counter++;
+      let margin;
+      if(0<houkou) {
+        margin = counter*bairitu;
+      }
+      else {
+        margin = migihasi - counter*bairitu;
+      }
+      document.getElementById("rectangle").style.margin = `0 0 0 ${margin}px`;
+      if (migihasi < counter*bairitu) {
+        counter = 0;
+        houkou * -1
+      }
+    }
+  </script>
+
+<!-- <script>
+"use strict";
+let タイマーID = setInterval(四角を動かす, 20); // 時間は適当な長さに。1/1000単位
+let カウンタ = 0;
+
+// setIntervalで、連続して「四角を動かす」を呼び出す
+function 四角を動かす() {
+  カウンタ+=5;
+  let 四角 = document.getElementById("rectangle");
+  四角.style.marginLeft = カウンタ + "px";
+  // left-margin（左端から四角までの距離）を指定
+  if (500 < カウンタ) { // 終了させる 　←★★要変更★★
+    clearInterval(タイマーID);
+  }
+}
+</script> -->
+<!-- <script>
+  let timerID = setInterval(movecar, 20);
+  let counter = 0;
+  function movecar() {
+    counter ++;
+    let car = document.getElementById("car");
+    car.style.marginLeft = counter + "px";
+    if (500 < counter) {
+      clearInterval(timerID);
+    }
+  }
+  </script> -->
+
+</body>
+</html>

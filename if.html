@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>おみくじ</title>
+</head>
+<body>
+
+<script type="text/javascript">
+"use strict";
+
+function omikuji() {
+  let x = MAth.random();
+
+  if (0.75 <= x) {
+    x="大吉"
+  }
+  else if (0.5 <= x) {
+    x="小吉"
+  }
+  else if (0.25 <= x) {
+    x="末吉"
+  }
+  else {
+    x="凶"
+  }
+  return x;
+}
+
+document.write(`Aさんの今日の運勢：${omikuji()}+"<br>"`);
+document.write(`Bさんの今日の運勢：${omikuji()}+"<br>"`);
+
+
+
+// let x = Math.random();  // 0以上1未満の小数を返す
+// document.write(`Math.randomの値：${x}`)
+// if (0.75 <= x) {
+//   x = "大吉";
+// }
+// else if (0.5 <= x) {
+//   x = "小吉";
+// }
+// else if (0.25 <= x) {
+//   x = "末吉";
+// }
+// else {
+//   x = "凶";
+// }
+// document.write(`<br>今日の運勢は${x}です！`);
+</script>
+
+</body>
+</html>

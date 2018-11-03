@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>カウントダウン1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+"use strict";
+let カウンタ = 10;
+let タイマーID = setInterval(カウントダウン, 1000);
+
+function カウントダウン() {
+	if (カウンタ >= 0) {
+	document.write(カウンタ+ " ");
+		カウンタ--;
+	}
+	else {
+		clearInterval(タイマーID); // タイマー停止
+		document.write("発射！")
+	}
+}
+</script>
+
+</body>
+</html>
