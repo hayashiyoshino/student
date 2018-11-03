@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>四角を動かす</title>
+  <meta charset="UTF-8">
+  <title>四角を動かす</title>
 </head>
 
 <body>
   <div id="rectangle" style="background-color: #6DBBA1;
-       width: 200px; height: 180px;">
-  </div>
-  <div id="car">
-    <img src="pictures/car1.png">
-  </div>
+  width: 200px; height: 180px;">
+</div>
+<div id="car">
+  <img src="pictures/car1.png">
+</div>
 
-  <script>
-    const migihasi = 800;
-    const bairitu = 5;
-    let counter = 0;
-    let houkou = 1;
-    const timerID = setInterval (movesikaku, 10);
-    function movesikaku() {
-      counter++;
-      let margin;
-      if(0<houkou) {
-        margin = counter*bairitu;
-      }
-      else {
-        margin = migihasi - counter*bairitu;
-      }
-      document.getElementById("rectangle").style.margin = `0 0 0 ${margin}px`;
-      if (migihasi < counter*bairitu) {
-        counter = 0;
-        houkou * -1
-      }
+<script>
+  const migihasi = 800;
+  const bairitu = 5;
+  let counter = 0;
+  let houkou = 1;
+  const timerID = setInterval (movesikaku, 10);
+  function movesikaku() {
+    counter++;
+    let margin;
+    if(0<houkou) {
+      margin = counter*bairitu;
     }
-  </script>
+    else {
+      margin = migihasi - counter*bairitu;
+    }
+    document.getElementById("rectangle").style.margin = `0 0 0 ${margin}px`;
+    if (migihasi < counter*bairitu) {
+      counter = 0;
+      houkou * -1
+    }
+  }
+</script>
 
 <!-- <script>
 "use strict";
@@ -63,7 +63,7 @@ function 四角を動かす() {
       clearInterval(timerID);
     }
   }
-  </script> -->
+</script> -->
 
 </body>
 </html>
